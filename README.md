@@ -1,2 +1,3 @@
 # Atmega128
-coding of Atmega128
+
+// everything is ok
