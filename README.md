@@ -1,3 +1,6 @@
 # Atmega128
-on Here,as a learner, I am got to record my project of ATmega128, 
-if you have some good idea, please let me know about that
+as a beginner, I have recorded my projects or something kind of my codes
+if you figured it out of my codes mistakes or if you know more good informations
+please let me know about that
+
+thanks
