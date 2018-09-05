@@ -17,7 +17,10 @@
 /*
  *
  *  BlueTooth slave mode
+ *	Get the data from Master BlueTooth and turn on the LED 1,2,3,4,5
  *
+ *  Master MAC address: 7C010A7C0E8E
+ *  Slave MAC address: 7C010A7C183B
  **/
 
 char getValue[30];
@@ -59,15 +62,15 @@ int main(void)
             {
                 PORTB = 0x02;
             }
-            else if(buffer[1]=='3')
+            else if(buffer[0]=='3')
             {
                 PORTB = 0x04;
             }
-            else if(buffer[2]=='4')
+            else if(buffer[0]=='4')
             {
                 PORTB = 0x08;
             }
-            else if(buffer[3]=='5')
+            else if(buffer[0]=='5')
             {
                 PORTB = 0x10;
             }

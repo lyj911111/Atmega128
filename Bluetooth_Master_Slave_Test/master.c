@@ -19,6 +19,8 @@
  *  BlueTooth Master mode
  *  Get the data from PC and toss to Atmega128 to forward the data to slave bluetooth
  *  
+ *  Master MAC address: 7C010A7C0E8E
+ *  Slave MAC address: 7C010A7C183B
  */
 
 char getValue[30];
@@ -42,7 +44,6 @@ ISR(USART0_RX_vect)
 
 int main(void)
 {
-    DDRB = 0xFF;    // LED Test 
 
     // receive the data from PC
     USART0_init(9600);
@@ -51,11 +52,15 @@ int main(void)
     
     sei();
     
+    // Send setting value of Master bluetooth 
+    USART1_puts("AT+CON7C010A7C183B\r\n");
+    
     while (1) 
     {
         if(recive_complete == 1)
         {
-            USART1_puts(buffer[0]);
+            USART1_puts(buffer);
+            USART1_puts("\r\n");
             recive_complete = 0;
         }
     }
