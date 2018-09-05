@@ -56,7 +56,7 @@ int main(void)
     {
         cnt++;                  //  cnt대신 내가 알고싶은 변수를 넣음.
         count[0] = cnt;
-        sprintf(count,"%d",cnt);
+        sprintf(count,"%d",cnt);	// 값의 변화를 확인할 수 있음.
         
         USART0_Tx_String(str);
         USART0_Tx_String("\r\n");
