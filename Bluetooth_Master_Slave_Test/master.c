@@ -19,9 +19,21 @@
  *  BlueTooth Master mode
  *  Get the data from PC and toss to Atmega128 to forward the data to slave bluetooth
  *  
- *  Master MAC address: 7C010A7C0E8E
- *  Slave MAC address: 7C010A7C183B
+ *  <MODE SETTING INFORMATION>
+ *  AT+RENEW  : Default Factory setting
+ *  AT+RESET  : Send this code after updating your code
+ *  AT+NAME   : Set the names of Bluetooth for identifying roles
+ *  AT+ROLE1  : Be a Master
+ *  AT+ROLE0  : Be a Slave
+ *  AT+IMME1  : Setting for preventing to connect automatically with both bluetooth before getting user's command
+ *  
+ *  
+ *  <information of used Bluetooth HM-10>
+ *  Master MAC address: 3CA308A10C6A
+ *  Slave  MAC address: 3CA30896A09A
  */
+
+
 
 char getValue[30];
 char buffer[30];
@@ -45,15 +57,15 @@ ISR(USART0_RX_vect)
 int main(void)
 {
 
-    // receive the data from PC
+    // Receive the data from PC
     USART0_init(9600);
-    // transmit the date to Master bluetooth
+    // Transmit the date to Master Bluetooth
     USART1_init(9600);
     
     sei();
     
-    // Send setting value of Master bluetooth 
-    USART1_puts("AT+CON7C010A7C183B\r\n");
+    // Send Mac address for connecting with Slave Bluetooth
+    USART1_puts("AT+CON3CA30896A09A\r\n");
     
     while (1) 
     {

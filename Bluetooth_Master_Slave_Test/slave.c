@@ -19,8 +19,18 @@
  *  BlueTooth slave mode
  *	Get the data from Master BlueTooth and turn on the LED 1,2,3,4,5
  *
- *  Master MAC address: 7C010A7C0E8E
- *  Slave MAC address: 7C010A7C183B
+ *  <MODE SETTING INFORMATION>
+ *  AT+RENEW  : Default Factory setting
+ *  AT+RESET  : Send this code after updating your code
+ *  AT+NAME   : Set the names of Bluetooth for identifying roles
+ *  AT+ROLE1  : Be a Master
+ *  AT+ROLE0  : Be a Slave
+ *  AT+IMME1  : Setting for preventing to connect automatically with both bluetooth before getting user's command
+ *  
+ *  
+ *  <information of used Bluetooth HM-10>
+ *  Master MAC address: 3CA308A10C6A
+ *  Slave  MAC address: 3CA30896A09A
  **/
 
 char getValue[30];
