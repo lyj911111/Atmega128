@@ -45,7 +45,7 @@ ISR(USART0_RX_vect)
 {
     buffer[i] = UDR0;
     
-    if(buffer[i++] == '\n' || buffer[i-1] == '\r')
+    if(buffer[i++] == '\n' )
     {
         buffer[i-1] = '\0';
         i = 0;
