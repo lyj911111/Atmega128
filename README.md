@@ -1,6 +1,8 @@
 # Atmega128
-as a beginner, I have recorded my projects or something kind of my codes
-if you figured it out of my codes mistakes or if you know more good informations
-please let me know about that
+As a beginner, I have recorded my projects or something kind of my codes
+If you find something wrong of my codes or if you have any good ideas,
+Feel Free correct them.
 
-thanks
+thank you for visiting here
+
+Cheers!
